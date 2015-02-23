@@ -1,0 +1,61 @@
+<!doctype>
+<head>
+<Title>jsPDF Demo local</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="../jspdf.js"></script>
+	<script type="text/javascript" src="../libs/Deflate/adler32cs.js"></script>
+	<script type="text/javascript" src="../libs/FileSaver.js/FileSaver.js"></script>
+	<script type="text/javascript" src="../libs/Blob.js/BlobBuilder.js"></script>
+
+	<script type="text/javascript" src="../jspdf.plugin.addimage.js"></script>
+
+	<script type="text/javascript" src="../jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="../jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="../jspdf.plugin.from_html.js"></script>
+	<script type="text/javascript" src="js/basic.js"></script>
+<script>
+function demo() {
+	var doc = new jsPDF();
+	
+// stanga sus
+	doc.setFontSize(12);
+	doc.text(20, 30, 'Instanta:  _____________');
+	doc.text(20, 38, 'Dosar nr.: ______________');
+	doc.text(20, 46, 'Termen: ______________');
+
+// centru
+	doc.setFontSize(14);
+	doc.setFontType("bold");
+	doc.text(60, 70, 'NOTA DE CALCUL A TAXEI DE TIMBRU');
+	
+	// Save the PDF
+	doc.save('Test.pdf');
+}	
+</script>
+</head>
+
+<body>
+<h2> PDFTest cu jsPDF </h2>
+<br><br><br><br>
+<h3>Primul exemplu - document simplu</h3>
+
+<p><a href="javascript:demo()" class="button">Descarca</a></p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
